@@ -63,4 +63,4 @@ getter 函数不应该返回 collection 类型的数据本身，因为这让用�
 
 如果各个 subclass 的差别只在 [返回常量数据] 的函数身上，则销毁这些 subclasses，在父类中新建一个值域来表示这个函数。
 如下示例，在父类中添加值域表示性别，取消两种子类。
-![image](./image/replace_subclass_with_fields.png)
+![image](../image/replace_subclass_with_fields.png)
