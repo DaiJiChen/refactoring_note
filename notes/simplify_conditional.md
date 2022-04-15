@@ -12,7 +12,9 @@
 如果条件式的每个分支上都有相同的代码段，则应该把相同的部分搬移到条件式之外。
 
 ### 4、Remove Control Flag (移除控制标记)
+
 在循环语句中，如果某个变亮带有 「控制标记」的作用。那么应该直接用 break 或 return 语句替代控制标记。
+
 例如，下方的 `done` 语句应该直接用 `break` 替代：
 ```
 set done to false 
@@ -24,6 +26,7 @@ while not done
 ```
 
 ### 5、Replace Nested Conditional with Guard Clauses (用卫语句取代嵌套条件式)
+
 多重判断条件的嵌套会影响可读性，卫语句不仅清晰明了，而且减少了圈复杂度。
 
 如下：第二段代码采用卫语句，明显增加了可读性
@@ -52,6 +55,7 @@ double getPayAmount() {
 ```
 
 ### 6、Replace Conditional with Polymorphism (用多态取代条件式)
+
 如果一串 `if-elif-else` 语句根据对象类型二选择不同的行为，
 那么应该将每个分支下的语句快放进一个 subclass 内的覆写函数中，然后将原始函数申明为抽象函数。
 
@@ -71,7 +75,9 @@ double getSpeed() {
 ```
 
 ### 7、Introduce Null Object (引入Null对象)
+
 `很有趣，值得关注`
+
 **为了解决的问题：**我们在进行某些操作前，往往需要检查对象是否存在，这样的检查会出现很多次。例如我们会请求获取 person 对象，然后再判断 person 是否为空，然后再调用 person 对象的某个函数。
 
 **什么是Null Object：** Null Object 往往和某个真正的 object 拥有一样的接口，但是返回的都是默认的值。
