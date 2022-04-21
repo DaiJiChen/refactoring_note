@@ -102,9 +102,23 @@ double finalPrice = discountProce() // 在函数内部调用 getDiscountlevel()
 
 如果一个函数从未被其他任何对象使用过
 
-那么应该将这个函数设为 private
+那么应该将这个函数设为 private 函数
 
-### 
+### Replace Constructor with Factory Method (以工厂函数取代构造函数)
+
+方便我们根据 TypeCode 来创建不同类型的 Subclasses。避免了啰嗦的 switch-case 语句
+
+### Encapsulate Downcast (封装向下转型动作)
+
+在对返回值类型要求你比较明确的地方，使用具体的对象类型，而不要使用抽象的父类
+
+### Replace Error Code With Exception (用异常取代错误码)
+
+异常（exception）的出现是程序语言的一大进步。运用Replace Error Code with Exception，异常便可协助我们避免很多 复杂的错误处理逻辑
+
+### Replace Exception with Test (以测试取代异常)
+
+面对一个「调用者可预先加以检查」的条件，应该用判断语句预先进行判断，而不是等到错误发生时再抛出异常。
 
 
 
